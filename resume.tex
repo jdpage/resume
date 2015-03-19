@@ -1,0 +1,183 @@
+% File: resume.tex
+% Copyright (C)  2015  Jonathan David Page
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3
+% or any later version published by the Free Software Foundation;
+% with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
+% Texts. A copy of the license is included in the section entitled "GNU
+% Free Documentation License".
+%
+% (I know you're thinking "that's silly, why would you ever copyright 
+% your resume," and you're sort of right. It is silly. But several of my
+% friends have used this markup as a basis for typesetting their own
+% resumes, because let's be realistic, the documentation for the various
+% LaTeX packages involved isn't that great. The thing is, everything you
+% make is automatically copyrighted under US law. So I feel obliged to
+% formalize the arrangement and make this document explicitly available
+% as a basis for other people's resumes.)
+
+% ModernCV with icons from FontAwesome
+\documentclass[11pt,letterpaper]{moderncv}
+\moderncvtheme[black]{casual}
+\moderncvicons{awesome}
+\usepackage[scale=0.75]{geometry} % margins are evil!
+
+% Merriweather for body text
+\usepackage{setspace}
+\usepackage[full]{textcomp}
+\usepackage[light]{merriweather}
+\linespread{1.1}
+
+% Use Fira Sans for headers
+\usepackage{FiraSans}
+\renewcommand*\namefont{\sffamily\fontsize{40}{48}\selectfont}
+\renewcommand*\sectionfont{\sffamily\bfseries\fontsize{20}{24}\fontshape{sc}\selectfont}
+
+% Miscellanea
+\usepackage{engord}
+\setlength{\hintscolumnwidth}{46mm}
+\nopagenumbers{}
+
+% Personal Info
+\firstname{Jonathan David}
+\familyname{Page}
+\input{personalinfo.tex}
+\email{jdpage@ncsu.edu}
+\homepage{www.jonathandavidpage.com}
+\social[github]{jdpage}
+
+% Resume Proper
+\begin{document}
+
+% This has to be set after the document begins
+\setlength{\parskip}{4em}
+
+\makecvtitle
+\section{Education}
+\cventry{August 2011\\to May 2015 (expected)}
+    {Mathematics Bachelor of Sciences}{North Carolina State University}
+    {Raleigh}{NC}
+    {
+        \begin{itemize}
+            \item Minor in \textbf{Computer Programming}
+            \item Minor in \textbf{Creative Writing}
+        \end{itemize}
+    }
+\cvline{GPA:}{Cumulative \textbf{3.418}, Major \textbf{3.177}, Minors \textbf{3.333} \& \textbf{3.500} respectively}
+\cvline{Awards:}{Goodnight Scholar, National Merit Scholar}
+
+\section{Work Experience}
+\cventry{August 2014 to Present}
+    {Lab TA for Python (CSC 111)}
+    {NCSU Department of Computer Science}
+    {Raleigh}{NC}
+    {
+    	\begin{itemize}
+			\item Teaching a brief lecture at the beginning of each lab
+			\item Helping students work through exercises and homeworks
+			\item Holding two office hours every week
+			\item Helping refine course materials
+			\item Mentoring newer TAs
+		\end{itemize}
+    }
+\cventry{May--August 2014\\\& May--August 2013}
+    {Junior Software Engineer}
+    {e3 Retail LLC}
+    {Raleigh}{NC}
+    {
+        \begin{itemize}
+            \item Helped design, build, and maintain internal APIs using Microsoft technologies
+            \item Maintained customer demo branch of product backend
+            \item Rewrote internal database editing tool to use WPF
+            \item Implemented backend mockup to facilitate frontend development
+        \end{itemize}
+    }
+    \cventry{September 2012\\to May 2013}
+    {Undergraduate Researcher}
+    {NCSU Department of Mathematics}
+    {Raleigh, NC}
+    {}{
+        % TODO: check with Dr. Hauenstein what I can put here
+        \begin{itemize}
+            \item Worked under \textbf{Dr. J.~D. Hauenstein}, Asst Professor
+            % \item Developed a certified nonlinear system solver
+            \item Developed a custom arbitrary-precision numerics library supporting complex-valued scalar and matrix operations
+            \item Projects written in C targeting Linux using Cmake (previously Autotools), employing GMPlib
+        \end{itemize}
+    }
+\cventry{May--August 2012\\\& June--August 2011}
+    {Junior Software Engineer}
+    {echoBase Inc.}
+    {Wake Forest}{NC}
+    {
+        \begin{itemize}
+            \item Improved administration interface
+            \item Designed new authentication/authorization system
+            \item Implemented additional features in the mailing system
+            \item Worked on integration targets
+        \end{itemize}
+    }
+\cventry{Summer, Fall 2012\\\& Summer, Fall 2011}
+    {Web Presence Consultant}
+    {Wake Weekly, Inc.}
+    {Wake Forest}{NC}
+    {
+        \begin{itemize}
+            \item Provided consultation services for local newspaper for an upcoming web presence refresh
+            \item Implemented online version of ``Best of the Best'' contest using custom PHP solution
+        \end{itemize}
+    }
+
+\section{Languages and Tools}
+\cvline{Proficient with:}{Python (2 and 3), C, C\#, Java, Javascript, Tcl/Tk}
+\cvline{Prior experience with:}{Rust, Ruby, C++, Go, PHP, Haskell}
+\cvline{Selected technologies:}{
+    Linux (esp. Fedora and RHEL-like),
+    Mac OS X,
+    Windows,
+    .NET Framework 4.5 (incl. LINQ, WPF, Workflow),
+    Java EE,
+    JQuery,
+    HTML5,
+    HL7,
+    Docker
+}
+
+\section{Extracurricular}
+\cvline{Spring 2013}{Public Relations Officer, NCSU Linux User Group.}
+\cventry{Fall 2011}
+    {IEEEXtreme 5.0}
+    {IEEE}
+    {\engordnumber{96} place out of 1516 registered teams worldwide}
+    {}{Solved as many programming puzzles as possible within 24 hours with two other team members.}
+\cventry{Spring 2011}
+    {Web Challenge}
+    {Technology Association of Georgia}
+    {\engordnumber{3} place in category}
+    {}{
+        With 2 other team members, built a webapp designed to enable students to grasp orbital dynamics through a combination of self-directed and guided sessions. (C\#, Silverlight/WPF)
+    }
+\cventry{Spring 2010}
+    {Web Challenge}
+    {Technology Association of Georgia}
+    {\engordnumber{1} place in category}
+    {}{
+        With 2 other team members, designed and partially implemented an online educational game based on chemistry concepts. (PHP, JQuery)
+    }
+\cvline{Interests \& Hobbies:}{
+    \textbf{Science fiction \& fantasy literature},
+    strategy games,
+    \textbf{physics},
+    astronomy,
+    \textbf{mythology},
+    running,
+    \textbf{creative writing},
+    drawing,
+    \textbf{programming},
+    graphic design \& typography,
+    \textbf{cooking}
+}
+
+\end{document}
+
+% vim:textwidth=0:cc=0
